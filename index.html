@@ -1,137 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YOHJI | AI Visual Designer</title>
+    <title>朱杰 / yoji | Motion Resume</title>
     <meta
       name="description"
-      content="AI 视觉设计师个人简历网站，展示 AI 产品视觉、品牌主视觉、动态图像思路与可复用提示词系统。"
+      content="Motion-heavy bilingual personal resume focused on visual design, AI coding, and product thinking."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090909'/%3E%3Ctext x='50%25' y='54%25' fill='white' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EY%3C/text%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=League+Spartan:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Martian+Mono:wght@300;400;600&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <div class="ambient ambient-a" aria-hidden="true"></div>
-      <div class="ambient ambient-b" aria-hidden="true"></div>
-      <div class="ambient ambient-c" aria-hidden="true"></div>
-
-      <header class="site-header reveal" id="top">
-        <a class="brand" href="#top" aria-label="Back to top">
-          <span class="brand-mark" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-          <span id="brandName">YOHJI</span>
-        </a>
-
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#modes">能力</a>
-          <a href="#projects">作品</a>
-          <a href="#system">方法</a>
-          <a href="#contact">联系</a>
-        </nav>
-
-        <a class="button button-primary header-button" id="headerCta" href="#contact">Book Interview</a>
-      </header>
-
-      <main>
-        <section class="hero section">
-          <div class="hero-copy reveal">
-            <p class="eyebrow" id="heroEyebrow"></p>
-            <p class="hero-kicker" id="heroKicker"></p>
-            <h1 class="hero-title" id="heroTitle"></h1>
-            <p class="hero-summary" id="heroSummary"></p>
-
-            <div class="hero-actions" id="heroActions"></div>
-            <ul class="hero-stats" id="heroStats" aria-label="Profile highlights"></ul>
-          </div>
-
-          <aside class="hero-brief panel reveal" aria-label="Design briefing">
-            <div class="brief-topline">
-              <p id="briefLabel"></p>
-              <span class="status-pill" id="briefStatus"></span>
-            </div>
-            <h2 id="briefTitle"></h2>
-            <p class="brief-summary" id="briefSummary"></p>
-
-            <div class="brief-list" id="briefList"></div>
-
-            <div class="prompt-stack" id="promptStack" aria-label="Prompt directions"></div>
-          </aside>
-        </section>
-
-        <section class="section" id="modes">
-          <div class="section-head reveal">
-            <p class="section-label">Core Modes</p>
-            <h2>把 AI 视觉从“出图”做成“可复用的设计能力”</h2>
-          </div>
-          <div class="mode-grid" id="modeGrid"></div>
-        </section>
-
-        <section class="section" id="projects">
-          <div class="section-head reveal">
-            <p class="section-label">Selected Works</p>
-            <h2>不是把图做漂亮，而是把视觉语言做成品牌资产</h2>
-          </div>
-          <div class="project-grid" id="projectGrid"></div>
-        </section>
-
-        <section class="section system-grid" id="system">
-          <div class="panel workflow-panel reveal">
-            <div class="section-head compact">
-              <p class="section-label">Workflow</p>
-              <h2>AI 视觉设计不是灵感碰运气，而是一套受控流程</h2>
-            </div>
-            <div class="workflow-list" id="workflowList"></div>
-          </div>
-
-          <div class="panel profile-panel reveal">
-            <div class="section-head compact">
-              <p class="section-label">Resume Snapshot</p>
-              <h2>我提供的不只是画面，还有速度、系统和协作效率</h2>
-            </div>
-
-            <div class="snapshot-grid" id="snapshotGrid"></div>
-
-            <div class="profile-columns">
-              <div>
-                <h3>Career Signals</h3>
-                <div class="timeline-list" id="timelineList"></div>
-              </div>
-
-              <div>
-                <h3>Tool Stack</h3>
-                <div class="tool-cloud" id="toolCloud"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="contact">
-          <div class="panel manifesto-panel reveal">
-            <div class="manifesto-copy">
-              <p class="section-label">Final Frame</p>
-              <h2 id="manifestoTitle"></h2>
-              <p id="manifestoBody"></p>
-            </div>
-
-            <div class="contact-panel">
-              <p class="contact-label">Contact / Direct Line + Live Projects</p>
-              <div class="contact-list" id="contactList"></div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <script src="script.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

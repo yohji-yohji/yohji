@@ -1,13 +1,19 @@
 {
-  "name": "yoji-site",
-  "version": "1.0.0",
+  "name": "yoji-motion-resume",
+  "version": "3.0.0",
   "private": true,
-  "description": "Static portfolio site with a Node.js backend server for Linux deployment.",
+  "type": "module",
+  "description": "A bilingual motion-heavy personal resume site inspired by cappen.com, built with Vite, GSAP, Lenis, and Three.js.",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "vite --host 0.0.0.0 --port 7878",
+    "start": "vite --host 0.0.0.0 --port 7878",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 7878"
   },
-  "engines": {
-    "node": ">=18"
+  "dependencies": {
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.19",
+    "three": "^0.183.2",
+    "vite": "^6.4.1"
   }
 }

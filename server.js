@@ -25,10 +25,12 @@ const MIME_TYPES = {
 
 function sendJson(req, res, statusCode, payload) {
   const body = JSON.stringify(payload);
+
   res.writeHead(statusCode, {
     "Content-Length": Buffer.byteLength(body),
     "Content-Type": "application/json; charset=utf-8",
   });
+
   if (req.method === "HEAD") {
     res.end();
     return;
@@ -131,7 +133,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`Yoji server running at http://${HOST}:${PORT}`);
+  console.log(`Yoji brand site running at http://${HOST}:${PORT}`);
 });
 
 function shutdown(signal) {

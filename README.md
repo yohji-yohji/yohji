@@ -1,62 +1,41 @@
-# Yoji Site
+# Yoji Motion Resume
 
-这是一个带 Node.js 服务端入口的静态作品集项目，默认监听 `7878`。
+这一版不是普通静态简历页，而是参考 `cappen.com` 的实现思路重构的个人品牌站。
 
-## 本地启动
+核心技术栈：
+
+- `Vite`
+- `GSAP`
+- `Lenis`
+- `Three.js`
+
+核心表达方向：
+
+- 视觉设计
+- AI Coding
+- 产品能力
+
+## 本地开发
 
 ```bash
-npm start
+npm install
+npm run dev
 ```
 
-访问：
+默认地址：
 
 ```text
 http://127.0.0.1:7878
 ```
 
-健康检查：
-
-```text
-http://127.0.0.1:7878/health
-```
-
-## Linux 部署
-
-1. 把项目上传到服务器，例如 `/var/www/yoji`
-2. 安装 Node.js 18+
-3. 进入项目目录执行：
+## 构建
 
 ```bash
-npm start
+npm run build
 ```
 
-如果需要长期后台运行，推荐使用 `systemd`。
-
-## systemd 后台常驻
-
-项目内置了服务文件模板：
-
-`deploy/yoji.service`
-
-在服务器上执行：
+## 预览构建结果
 
 ```bash
-sudo cp deploy/yoji.service /etc/systemd/system/yoji.service
-sudo systemctl daemon-reload
-sudo systemctl enable --now yoji
-sudo systemctl status yoji
-```
-
-## 常用命令
-
-查看日志：
-
-```bash
-sudo journalctl -u yoji -f
-```
-
-重启服务：
-
-```bash
-sudo systemctl restart yoji
+npm run preview
 ```
